@@ -20,7 +20,7 @@ const Booking = ({ booking, apartment }) => {
       }),
       {
         pending: 'Thực hiện giao dịch...',
-        success: 'Xóa thành công 👌',
+        success: 'Giao dịch thành công 👌',
         error: 'Xảy ra lỗi 🤯',
       }
     )
@@ -38,7 +38,7 @@ const Booking = ({ booking, apartment }) => {
       }),
       {
         pending: 'Thực hiện giao dịch...',
-        success: 'Xóa thành công 👌',
+        success: 'Giao dịch thành công 👌',
         error: 'Xảy ra lỗi 🤯',
       }
     )
@@ -56,7 +56,7 @@ const Booking = ({ booking, apartment }) => {
       }),
       {
         pending: 'Thực hiện giao dịch...',
-        success: 'Xóa thành công 👌',
+        success: 'Giao dịch thành công 👌',
         error: 'Xảy ra lỗi 🤯',
       }
     )

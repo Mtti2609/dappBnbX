@@ -37,7 +37,7 @@ const AddReview = ({ roomId }) => {
       }),
       {
         pending: 'Thực hiện giao dịch...',
-        success: 'Xóa thành công 👌',
+        success: 'Giao dịch thành công 👌',
         error: 'Xảy ra lỗi 🤯',
       }
     )
