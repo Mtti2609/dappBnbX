@@ -1,31 +1,39 @@
 import { useState } from 'react'
 import { toast } from 'react-toastify'
 import { FaTimes } from 'react-icons/fa'
+import { useDispatch, useSelector } from 'react-redux'
+import { globalActions } from '@/store/globalSlices'
+import { addReview } from '@/services/blockchain'
 
 const AddReview = ({ roomId }) => {
-  const [reviewText, setReviewText] = useState('')
-  const reviewModal = 'scale-0'
+  const [comment, setComment] = useState('')
+  const { reviewModal } = useSelector((states) => states.globalStates)
+  const dispatch = useDispatch()
+  const { setReviewModal } = globalActions
 
-  const closeModal = () => {}
+  const closeModal = () => {
+    dispatch(setReviewModal('scale-0'))
+  }
 
   const resetForm = () => {
-    setReviewText('')
+    setComment('')
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    if (!reviewText) return
+    if (!comment) return
 
     await toast.promise(
       new Promise(async (resolve, reject) => {
-        // await addReview(roomId, reviewText)
-        //   .then(async (tx) => {
-        //     dispatch(setReviewModal('scale-0'))
-        //     resetForm()
-        //     resolve(tx)
-        //   })
-        //   .catch(() => reject())
+        await addReview(roomId, comment)
+          .then((tx) => {
+            console.log(tx);
+            closeModal()
+            resetForm()
+            resolve(tx)
+          })
+          .catch(() => reject())
       }),
       {
         pending: 'Approve transaction...',
@@ -73,8 +81,8 @@ const AddReview = ({ roomId }) => {
               type="text"
               name="comment"
               placeholder="Drop your review..."
-              value={reviewText}
-              onChange={(e) => setReviewText(e.target.value)}
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
               required
             ></textarea>
           </div>

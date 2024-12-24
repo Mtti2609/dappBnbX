@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 import { useRouter } from 'next/router'
 import { FaTimes } from 'react-icons/fa'
 import { truncate } from '@/utils/helper'
-import { generateFakeApartment } from '@/utils/fakeData'
+import { getApartment, updateApartment } from '@/services/blockchain'
 
 export default function Edit({ apartment }) {
   const { address } = useAccount()
@@ -33,12 +33,13 @@ export default function Edit({ apartment }) {
 
     await toast.promise(
       new Promise(async (resolve, reject) => {
-        // await updateApartment(params)
-        //   .then(async () => {
-        //     navigate.push('/room/' + apartment.id)
-        //     resolve()
-        //   })
-        //   .catch(() => reject())
+        updateApartment(params)
+          .then((tx) => {
+            console.log(tx)
+            navigate.push('/room/' + apartment.id)
+            resolve(tx)
+          })
+          .catch(() => reject())
       }),
       {
         pending: 'Approve transaction...',
@@ -218,7 +219,7 @@ export default function Edit({ apartment }) {
 
 export const getServerSideProps = async (context) => {
   const { roomId } = context.query
-  const apartment = generateFakeApartment(roomId)[0]
+  const apartment = await getApartment(roomId)
   return {
     props: {
       apartment: JSON.parse(JSON.stringify(apartment)),
