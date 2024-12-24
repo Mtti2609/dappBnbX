@@ -109,6 +109,7 @@ contract DappBnbX is Ownable, ReentrancyGuard {
     require(price > 0 ether, 'Price cannot be zero');
 
     ApartmentStruct memory apartment = apartments[id];
+    
     apartment.name = name;
     apartment.description = description;
     apartment.location = location;

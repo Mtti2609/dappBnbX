@@ -6,7 +6,7 @@ const Collection = ({ appartments }) => {
       {appartments.map((room, i) => (
         <Card appartment={room} key={i} />
       ))}
-      {appartments.length < 1 && <span>No appartments yet!</span>}
+      {appartments.length < 1 && <span>Chưa có căn hộ nào cho thuê cả!</span>}
     </div>
   )
 }

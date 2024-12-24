@@ -42,9 +42,9 @@ const Calendar = ({ apartment, timestamps }) => {
           .catch(() => reject())
       }),
       {
-        pending: 'Approve transaction...',
-        success: 'Apartment booked successfully 👌',
-        error: 'Encountered error 🤯',
+        pending: 'Thực hiện giao dịch...',
+        success: 'Xóa thành công 👌',
+        error: 'Xảy ra lỗi 🤯',
       }
     )
   }
@@ -65,7 +65,7 @@ const Calendar = ({ apartment, timestamps }) => {
         <div className="flex justify-center items-center">
           <FaEthereum className="text-lg text-gray-500" />
           <span className="text-lg text-gray-500">
-            {apartment?.price} <small>per night</small>
+            {apartment?.price} <small>mỗi đêm</small>
           </span>
         </div>
       </div>
@@ -74,7 +74,7 @@ const Calendar = ({ apartment, timestamps }) => {
         id="checkInDate"
         selected={checkInDate}
         onChange={setCheckInDate}
-        placeholderText="YYYY-MM-DD (Check In)"
+        placeholderText="YYYY-MM-DD (Nhận phòng)"
         dateFormat="yyyy-MM-dd"
         minDate={new Date()}
         excludeDates={timestamps}
@@ -85,7 +85,7 @@ const Calendar = ({ apartment, timestamps }) => {
         id="checkOutDate"
         selected={checkOutDate}
         onChange={setCheckOutDate}
-        placeholderText="YYYY-MM-DD (Check out)"
+        placeholderText="YYYY-MM-DD (Trả phòng)"
         dateFormat="yyyy-MM-dd"
         minDate={checkInDate}
         excludeDates={timestamps}
@@ -97,11 +97,11 @@ const Calendar = ({ apartment, timestamps }) => {
         to-gray-600 text-white w-full rounded-md focus:outline-none
         focus:ring-0"
       >
-        Book
+        Book phòng
       </button>
 
       <Link href={`/room/bookings/${apartment?.id}`} className="text-pink-500">
-        Check your bookings
+        Kiểm tra Booking
       </Link>
     </form>
   )

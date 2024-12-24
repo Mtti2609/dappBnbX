@@ -36,9 +36,9 @@ const AddReview = ({ roomId }) => {
           .catch(() => reject())
       }),
       {
-        pending: 'Approve transaction...',
-        success: 'Review submitted successfully 👌',
-        error: 'Encountered error 🤯',
+        pending: 'Thực hiện giao dịch...',
+        success: 'Xóa thành công 👌',
+        error: 'Xảy ra lỗi 🤯',
       }
     )
   }
@@ -51,7 +51,7 @@ const AddReview = ({ roomId }) => {
       <div className="bg-white shadow-lg shadow-slate-900 rounded-xl w-11/12 md:w-2/5 h-7/12 p-6">
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="flex flex-row justify-between items-center">
-            <p className="font-semibold">Add a review today</p>
+            <p className="font-semibold">Thêm đánh giá ngay hôm nay !!!</p>
             <button
               type="button"
               className="border-0 bg-transparent focus:outline-none"
@@ -66,7 +66,7 @@ const AddReview = ({ roomId }) => {
               className="flex justify-center items-center rounded-full overflow-hidden
               h-10 w-40 shadow-md shadow-slate-300 p-4"
             >
-              <p className="text-lg font-bold text-slate-700"> DappBnB</p>
+              <p className="text-lg font-bold text-slate-700"> TriBnB</p>
             </div>
           </div>
 
@@ -80,7 +80,7 @@ const AddReview = ({ roomId }) => {
                 focus:outline-none focus:ring-0 h-14"
               type="text"
               name="comment"
-              placeholder="Drop your review..."
+              placeholder="Hãy đánh giá..."
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               required
@@ -93,7 +93,7 @@ const AddReview = ({ roomId }) => {
             bg-[#ff385c] py-2 px-5 rounded-full drop-shadow-xl border
             focus:outline-none focus:ring mt-5"
           >
-            Submit
+            Ấn vào đây
           </button>
         </form>
       </div>

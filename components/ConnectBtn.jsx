@@ -42,7 +42,7 @@ const ConnectBtn = () => {
                     onClick={openConnectModal}
                     type="button"
                   >
-                    Connect Wallet
+                    Kết nối ví!
                   </button>
                 )
               }
@@ -56,7 +56,7 @@ const ConnectBtn = () => {
                     onClick={openChainModal}
                     type="button"
                   >
-                    Wrong network
+                    Mạng kết nối lỗi
                   </button>
                 )
               }

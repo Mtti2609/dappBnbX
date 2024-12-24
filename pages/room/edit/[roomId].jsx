@@ -42,9 +42,9 @@ export default function Edit({ apartment }) {
           .catch(() => reject())
       }),
       {
-        pending: 'Approve transaction...',
-        success: 'Apartment updated successfully 👌',
-        error: 'Encountered error 🤯',
+        pending: 'Thực hiện giao dịch...',
+        success: 'Cập nhật căn hộ thành công 👌',
+        error: 'Xảy ra lỗi 🤯',
       }
     )
   }
@@ -66,7 +66,7 @@ export default function Edit({ apartment }) {
       <div className="w-11/12 md:w-2/5 h-7/12 p-6">
         <form onSubmit={handleSubmit} className="flex flex-col">
           <div className="flex justify-center items-center">
-            <p className="font-semibold text-black">Edit Room</p>
+            <p className="font-semibold text-black">Cập nhật thông tin Căn hộ</p>
           </div>
 
           <div className="flex flex-row justify-between items-center border border-gray-300 p-2 rounded-xl mt-5">
@@ -76,7 +76,7 @@ export default function Edit({ apartment }) {
                 focus:outline-none focus:ring-0"
               type="text"
               name="name"
-              placeholder="Room Name "
+              placeholder="Tên căn hộ "
               onChange={(e) => setName(e.target.value)}
               value={name}
               required
@@ -92,7 +92,7 @@ export default function Edit({ apartment }) {
               step={0.01}
               min={0.01}
               name="price"
-              placeholder="Price (ETH)"
+              placeholder="Tiền phòng (ETH)"
               onChange={(e) => setPrice(e.target.value)}
               value={price}
               required
@@ -106,7 +106,7 @@ export default function Edit({ apartment }) {
                 focus:outline-none focus:ring-0"
               type="url"
               name="images"
-              placeholder="Images"
+              placeholder="Hình ảnh"
               onChange={(e) => setImages(e.target.value)}
               value={images}
             />
@@ -117,7 +117,7 @@ export default function Edit({ apartment }) {
                 type="button"
                 className="p-2 bg-[#ff385c] text-white rounded-full text-sm"
               >
-                Add image link
+                Link hình ảnh
               </button>
             )}
           </div>
@@ -155,7 +155,7 @@ export default function Edit({ apartment }) {
                 focus:outline-none focus:ring-0"
               type="text"
               name="location"
-              placeholder="Location"
+              placeholder="Địa điểm"
               onChange={(e) => setLocation(e.target.value)}
               value={location}
               required
@@ -172,7 +172,7 @@ export default function Edit({ apartment }) {
                 focus:outline-none focus:ring-0"
               type="text"
               name="rooms"
-              placeholder="Number of room"
+              placeholder="Số lượng phòng"
               onChange={(e) => setRooms(e.target.value)}
               value={rooms}
               required
@@ -189,7 +189,7 @@ export default function Edit({ apartment }) {
                 focus:outline-none focus:ring-0 h-20"
               type="text"
               name="description"
-              placeholder="Room Description"
+              placeholder="Mô tả"
               onChange={(e) => setDescription(e.target.value)}
               value={description}
               required
@@ -209,7 +209,7 @@ export default function Edit({ apartment }) {
             }`}
             disabled={!address}
           >
-            Update Apartment
+            Cập nhật căn hộ
           </button>
         </form>
       </div>

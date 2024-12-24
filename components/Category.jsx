@@ -11,12 +11,12 @@ const Category = () => {
       <p className="flex flex-col items-center hover:text-black border-b-2
        border-transparent hover:border-black hover:cursor-pointer pb-2">
         <TbBeach className="text-3xl" />
-        Beach
+        Biển
       </p>
       <p className="flex flex-col items-center hover:text-black border-b-2
        border-transparent hover:border-black hover:cursor-pointer pb-2">
         <GiIsland className="text-3xl" />
-        Island
+        Đảo
       </p>
       <p className="flex flex-col items-center hover:text-black border-b-2
        border-transparent hover:border-black hover:cursor-pointer pb-2">
@@ -31,7 +31,7 @@ const Category = () => {
       <p className="flex flex-col items-center hover:text-black border-b-2
        border-transparent hover:border-black hover:cursor-pointer pb-2">
         <RiHotelLine className="text-3xl" />
-        Hotel
+        Khách sạn
       </p>
     </div>
   )

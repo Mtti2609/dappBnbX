@@ -19,9 +19,9 @@ const Booking = ({ booking, apartment }) => {
           .catch((error) => reject(error))
       }),
       {
-        pending: 'Approve transaction...',
-        success: 'Checked In successfully 👌',
-        error: 'Encountered error 🤯',
+        pending: 'Thực hiện giao dịch...',
+        success: 'Xóa thành công 👌',
+        error: 'Xảy ra lỗi 🤯',
       }
     )
   }
@@ -37,9 +37,9 @@ const Booking = ({ booking, apartment }) => {
           .catch(() => reject())
       }),
       {
-        pending: 'Approve transaction...',
-        success: 'Refunded successfully 👌',
-        error: 'Encountered error 🤯',
+        pending: 'Thực hiện giao dịch...',
+        success: 'Xóa thành công 👌',
+        error: 'Xảy ra lỗi 🤯',
       }
     )
   }
@@ -55,9 +55,9 @@ const Booking = ({ booking, apartment }) => {
           .catch(() => reject())
       }),
       {
-        pending: 'Approve transaction...',
-        success: 'Fund reclaimed successfully 👌',
-        error: 'Encountered error 🤯',
+        pending: 'Thực hiện giao dịch...',
+        success: 'Xóa thành công 👌',
+        error: 'Xảy ra lỗi 🤯',
       }
     )
   }
@@ -118,7 +118,7 @@ const TenantView = ({ booking, functions, currentUser, owner }) => {
             className="p-2 bg-red-500 text-white rounded-full text-sm px-4"
             onClick={functions.handleRefund}
           >
-            Refund
+            Hoàn tiền
           </button>
         </div>
       )}
@@ -128,7 +128,7 @@ const TenantView = ({ booking, functions, currentUser, owner }) => {
           className="p-2 bg-yellow-500 text-white font-medium italic
         rounded-full text-sm px-4"
         >
-          Checked In
+          Đã Check In!!!
         </button>
       )}
 
@@ -137,7 +137,7 @@ const TenantView = ({ booking, functions, currentUser, owner }) => {
           className="p-2 bg-blue-500 text-white font-medium italic
         rounded-full text-sm px-4"
         >
-          Booked
+          Đã Book Phòng
         </button>
       )}
 
@@ -150,7 +150,7 @@ const TenantView = ({ booking, functions, currentUser, owner }) => {
             rounded-full text-sm px-4"
             onClick={functions.handleFundReclaim}
           >
-            Claim Fund
+            Nhận lại tiền
           </button>
         )}
 
@@ -159,7 +159,7 @@ const TenantView = ({ booking, functions, currentUser, owner }) => {
           className="p-2 bg-orange-500 text-white font-medium italic
         rounded-full text-sm px-4"
         >
-          Refunded
+          Đã hoàn tiền
         </button>
       )}
     </div>

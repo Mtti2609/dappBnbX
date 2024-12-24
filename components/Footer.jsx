@@ -7,11 +7,11 @@ const Footer = () => {
     justify-center sm:justify-between bg-white border-t-2 border-t-slate-200 z-50"
     >
       <p className="flex space-x-4 items-center text-gray-600 text-lg">
-        With ♥️ DappBnb &copy;{new Date().getFullYear()}
+        Code bởi ♥️ TruongMinhTri_2111111240 &copy;{new Date().getFullYear()}
       </p>
       <div className="flex space-x-4 justify-center items-center font-semibold text-lg">
         <FiGlobe />
-        <p>English (US)</p>
+        <p>Vietnamese (VN)</p>
       </div>
     </div>
   )

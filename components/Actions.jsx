@@ -11,7 +11,7 @@ const Actions = ({ apartment }) => {
   const { address } = useAccount()
 
   const handleDelete = async () => {
-    if (confirm(`Are you sure you want to delete Apartment ${apartment?.id}?`)) {
+    if (confirm(`Bạn có chắc muốn xóa  ${apartment?.id}?`)) {
       await toast.promise(
         new Promise(async (resolve, reject) => {
           await deleteApartment(apartment?.id)
@@ -23,9 +23,9 @@ const Actions = ({ apartment }) => {
             .catch(() => reject())
         }),
         {
-          pending: 'Approve transaction...',
-          success: 'Apartment deleted successfully 👌',
-          error: 'Encountered error 🤯',
+          pending: 'Thực hiện giao dịch...',
+          success: 'Xóa thành công 👌',
+          error: 'Xảy ra lỗi 🤯',
         }
       )
     }
@@ -42,7 +42,7 @@ const Actions = ({ apartment }) => {
               bg-gray-500 hover:bg-transparent hover:text-gray-500 text-white"
           >
             <CiEdit size={15} />
-            <small>Edit</small>
+            <small>Chỉnh sửa</small>
           </Link>
           <button
             className="p-2 rounded-md shadow-lg border-[0.1px]
@@ -51,7 +51,7 @@ const Actions = ({ apartment }) => {
             onClick={handleDelete}
           >
             <MdDeleteOutline size={15} />
-            <small>Delete</small>
+            <small>Xóa căn hộ</small>
           </button>
         </>
       )}

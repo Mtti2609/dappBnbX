@@ -11,7 +11,7 @@ const Header = () => {
       <Link href={'/'}>
         <p className="text-[#ff385c] flex items-center text-xl">
           <FaAirbnb className=" font-semibold" />
-          DappBnb
+          TriBnB
         </p>
       </Link>
 
@@ -44,7 +44,7 @@ const ButtonGroup = () => {
             ease-in-out
           "
         >
-          Anywhere
+          Bất cứ đâu
         </button>
         <Link href={'/room/add'}>
           <button
@@ -64,7 +64,7 @@ const ButtonGroup = () => {
               ease-in-out
             "
           >
-            Add Rooms
+            Tạo Căn hộ mới
           </button>
         </Link>
 
@@ -84,7 +84,7 @@ const ButtonGroup = () => {
             ease-in-out
           "
         >
-          <p className="flex items-center">Any week</p>
+          <p className="flex items-center">Bất cứ tuần nào</p>
         </button>
       </div>
     </div>

@@ -46,7 +46,7 @@ export default function Room({
   return (
     <>
       <Head>
-        <title>Room | {apartment?.name}</title>
+        <title>Căn hộ | {apartment?.name}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -67,13 +67,13 @@ export default function Room({
 
         <div className="flex flex-col justify-between flex-wrap space-y-2">
           <div className="flex justify-start items-center space-x-2">
-            <h1 className="text-xl font-semibold">Reviews</h1>
+            <h1 className="text-xl font-semibold">Đánh giá</h1>
             {qualifiedReviewers?.includes(address) && (
               <button
                 className="cursor-pointer text-pink-500 hover:text-pink-700"
                 onClick={() => dispatch(setReviewModal('scale-100'))}
               >
-                Drop your review
+                Bình luận đánh giá của bạn
               </button>
             )}
           </div>

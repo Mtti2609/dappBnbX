@@ -15,14 +15,14 @@ const Card = ({ appartment }) => {
           <p className="font-semibold capitalize text-[15px]">{appartment.name}</p>
           <p className="flex justify-start items-center space-x-2 text-sm">
             <FaStar />
-            <span>New</span>
+            <span>Mới</span>
           </p>
         </div>
         <div className="flex justify-between items-center text-sm">
           <p className="text-gray-700">{formatDate(appartment.timestamp)}</p>
           <b className="flex justify-start items-center space-x-1 font-semibold">
             <FaEthereum />
-            <span>{appartment.price} Night</span>
+            <span>{appartment.price} Đêm</span>
           </b>
         </div>
       </div>

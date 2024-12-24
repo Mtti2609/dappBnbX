@@ -21,7 +21,7 @@ const Bookings = ({ apartmentData, bookingsData }) => {
   return (
     <div className="w-full sm:w-3/5 mx-auto mt-8">
       <h1 className="text-center text-3xl text-black font-bold">Bookings</h1>
-      {bookings.length < 1 && <div>No bookings for this apartment yet</div>}
+      {bookings.length < 1 && <div>Chưa book được</div>}
 
       {bookings.map((booking, i) => (
         <Booking key={i} id={roomId} booking={booking} apartment={apartment} />

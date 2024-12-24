@@ -1,7 +1,7 @@
 export const formatDate = (timestamp) => {
   const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' }
   const date = new Date(timestamp)
-  return date.toLocaleDateString('en-US', options)
+  return date.toLocaleDateString('vi-VN', options)
 }
 
 export const truncate = (text, startChars, endChars, maxLength) => {
